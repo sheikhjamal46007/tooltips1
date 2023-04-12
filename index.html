@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title>accordian 2</title>
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+	<div>
+		<p>ansn <a href="#" data-show="Alert!">Show</a></p>
+	</div>
+	
+	<script>
+		let link=document.querySelector("a");
+		link.addEventListener("mouseenter",function(e){
+			let mariappa=e.target;
+			let dell=mariappa.dataset.show;
+			let span=document.createElement("span");
+			span.innerHTML=dell;
+			link.appendChild(span);
+		})
+		let links=document.querySelector("a");
+		links.addEventListener("mouseleave",function(e){
+			let span1=document.querySelector("span");
+			span1.remove();
+		});
+
+	</script>
+		
+		
+		
+	</body>
+	
+</html>
